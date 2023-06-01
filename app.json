@@ -21,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/splash.png",
         "backgroundColor": "#CBC3E3"
-      }
+      },
+      "package": "com.spuckhafte.sporty"
     },
     "web": {
       "favicon": "./assets/icon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b66cc7ae-fb26-496f-a10d-a80d1acd21fc"
+      }
     }
   }
 }
