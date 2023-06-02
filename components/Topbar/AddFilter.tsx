@@ -1,6 +1,6 @@
 import allFilters from '../../assets/data/filters.json';
 import { Dialog, CheckBox } from '@rneui/base';
-import { useState, useCallback } from 'react';
+import { useCallback } from 'react';
 import { useDispatch } from 'react-redux';
 import { manageFilters } from '../../store/actions';
 
@@ -28,7 +28,6 @@ export default function AddFilter(props:
         closeDialog();
     }, [almostApplied]);
     
-
     return (
         <Dialog 
             isVisible={props.visible}

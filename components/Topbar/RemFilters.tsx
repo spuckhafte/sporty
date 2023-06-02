@@ -26,10 +26,11 @@ export default function RemFilters(props:
             />
             {
                 props.appliedFilters.length > 0 ? 
-                    props.appliedFilters.map(fil => {
+                    props.appliedFilters.map((fil, i) => {
                         return <FilterFlake 
                             fil={fil} 
-                            almostAppliedState={props.almostAppliedState} 
+                            almostAppliedState={props.almostAppliedState}
+                            key={i}
                         />
                     })
                     // @ts-ignore
