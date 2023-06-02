@@ -5,11 +5,16 @@ import { useSelector } from 'react-redux';
 import { Store } from '../../types';
 import { useState } from 'react';
 import AddFilter from './AddFilter';
+import RemFilters from './RemFilters';
 
 
 export default function TopBar() {
     const [addFiltVis, setAddFiltVis] = useState(false);
+    const [remFiltVis, setRemFiltVis] = useState(false);
     const filters:string[] = useSelector((state:Store) => state.appliedFilters);
+    
+    const almostAppliedState = useState(filters);
+    const [search, setSearch] = useState('');
     return (
         <View>
             <View id="details" style={style.locationNpfp}>
@@ -26,7 +31,10 @@ export default function TopBar() {
                 lightTheme={true} 
                 placeholder="Enter your city..."
                 containerStyle={style.searchBar}
-            />
+                value={search}
+                onChangeText={e => setSearch(e)}
+                inputStyle={{ color: 'black' }}
+            /> 
             <View id="filters" style={style.filters}>
                 <Pressable 
                     style={style.addFilters} 
@@ -44,7 +52,10 @@ export default function TopBar() {
                         : filters.map((i, l) => <AFilter name={i} key={l} />)
                     }
                 </View>
-                <Pressable style={style.addFilters}>
+                <Pressable 
+                    style={style.addFilters}
+                    onPress={() => setRemFiltVis(true)}
+                >
                     <Icon 
                         name='angle-right'
                         type='fontisto'
@@ -57,6 +68,13 @@ export default function TopBar() {
                 appliedFilters={filters}
                 visible={addFiltVis}
                 setVisible={setAddFiltVis}
+                almostAppliedState={almostAppliedState}
+            />
+            <RemFilters 
+                appliedFilters={filters} 
+                visible={remFiltVis}
+                setVisible={setRemFiltVis}
+                almostAppliedState={almostAppliedState}
             />
         </View>
     )
@@ -154,7 +172,7 @@ const style = StyleSheet.create({
     },
 });
 
-function testView() {
+export function testView() {
     return { 
         borderStyle: 'solid',
         borderBottomColor: 'red',
