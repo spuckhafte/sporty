@@ -16,14 +16,14 @@ export default function TopBar() {
     const almostAppliedState = useState(filters);
     const [search, setSearch] = useState('');
     return (
-        <View>
+        <View style={{ marginBottom: 10 }}>
             <View id="details" style={style.locationNpfp}>
                 <View id="location-details" style={style.location}>
                     <Icon name="location" type="entypo" />
                     <Text style={style.locationName}>Haldwani</Text>
                 </View>
                 <Image 
-                    source={require('../../assets/fake_pfp.jpg')}
+                    source={require('../../assets/fake/fake_pfp.jpg')}
                     style={style.pfp}
                 ></Image>
             </View>

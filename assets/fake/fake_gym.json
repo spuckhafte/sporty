@@ -1,0 +1,35 @@
+{
+    "1": {
+        "id": "1",
+        "name": "Anytime Fitness",
+        "imgs": ["https://lakecentralnews.com/wp-content/uploads/2022/04/2022-04-05-21.44.46-900x632.jpg"],
+        "rating": "4",
+        "totalRatings": 123,
+        "area": "kusumkhera",
+        "city": "haldwani",
+        "state": "uttarakhand",
+        "country": "india"
+    },
+    "2": {
+        "id": "2",
+        "name": "Indian Addiction Gym",
+        "imgs": ["https://content3.jdmagicbox.com/comp/haldwani/y8/9999p5946.5946.220612234403.k8y8/catalogue/indian-addiction-gym-subhash-nagar-haldwani-gyms-nmgqzbhtlo.jpg"],
+        "rating": "3",
+        "totalRatings": 210,
+        "area": "damuadhunga",
+        "city": "haldwani",
+        "state": "uttarakhand",
+        "country": "india"
+    },
+    "3": {
+        "id": "3",
+        "name": "Gold's Gym",
+        "imgs": ["https://im.whatshot.in/img/2021/Feb/5eb15ce230a13-golds-gym-north-sydney-weights-1612167873.jpg"],
+        "rating": "4",
+        "totalRatings": 120,
+        "area": "kaladhungi",
+        "city": "haldwani",
+        "state": "uttarakhand",
+        "country": "india"
+    }
+}

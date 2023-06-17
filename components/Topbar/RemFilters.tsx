@@ -34,7 +34,7 @@ export default function RemFilters(props:
                         />
                     })
                     // @ts-ignore
-                    : <Text style={style.noFilterText}>NO FILTER APPLIED</Text>
+                    : <Text style={style.noFilterText}>EMPTY</Text>
             }
         </Dialog>
     )
